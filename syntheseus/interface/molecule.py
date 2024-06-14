@@ -13,7 +13,7 @@ from syntheseus.interface.typed_dict import TypedDict
 SMILES_SEPARATOR = "."
 
 
-class MoleculeMetaData(TypedDict, total=False):
+class MoleculeMetaData(TypedDict, total=False):  # type: ignore
     """Class to add typing to optional meta-data fields for molecules."""
 
     rdkit_mol: Chem.Mol

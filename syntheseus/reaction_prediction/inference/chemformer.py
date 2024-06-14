@@ -56,8 +56,7 @@ class ChemformerModel(ExternalReactionModel[InputType, ReactionType]):
 
         self.sampler = DecodeSampler(self.tokenizer, util.DEFAULT_MAX_SEQ_LEN)
 
-        with suppress_outputs():
-            self.model = BARTModel.load_from_checkpoint(chkpt_path, decode_sampler=self.sampler)
+        self.model = BARTModel.load_from_checkpoint(chkpt_path, decode_sampler=self.sampler)
 
         self.model = self.model.to(self.device)
         self.model.eval()

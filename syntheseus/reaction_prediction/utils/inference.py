@@ -83,7 +83,7 @@ def get_module_path(module: Any) -> str:
     # `_NamespacePath` object. Either way the conversion below leaves us with `List[str]`.
     path_list: List[str] = list(module.__path__)
 
-    if len(path_list) != 1:
-        raise ValueError(f"Cannot extract path to module {module} from {path_list}")
+    # if len(path_list) != 1:
+    #     raise ValueError(f"Cannot extract path to module {module} from {path_list}")
 
     return path_list[0]

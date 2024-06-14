@@ -14,6 +14,7 @@ from syntheseus.reaction_prediction.inference import (
     RetroKNNModel,
     RootAlignedModel,
 )
+from syntheseus.reaction_prediction.inference.retro_gfn import RetroGFNModel
 
 
 class ForwardModelClass(Enum):
@@ -29,6 +30,7 @@ class BackwardModelClass(Enum):
     MHNreact = MHNreactModel
     RetroKNN = RetroKNNModel
     RootAligned = RootAlignedModel
+    RetroGFN = RetroGFNModel
 
 
 @dataclass
